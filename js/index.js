@@ -39,3 +39,19 @@ formButtonChanges.addEventListener('onSelect', () => {
         window.alert("Quit lying!")
     }
 })
+
+// 5th Item
+
+const pageLoad = document.querySelector('p')
+
+pageLoad.addEventListener('load', () => {
+    pageLoad.addClass('.animateText')
+})
+
+// 6th Item
+
+const funSunButton = document.querySelectorAll(".btn")
+
+funSunButton.addEventListener('focus' (event) => {
+    funSunButton[0].textContent = "Pick Me!"
+})
