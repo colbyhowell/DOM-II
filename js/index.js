@@ -16,8 +16,8 @@ logoAnimate.addEventListener("mouseleave", () => {
 
 const navMovement = document.querySelector('.main-navigation')
 
-navMovement.addEventListener('scroll', () => {
-    navMovement.style.backgroundColor = "gray"
+window.addEventListener('scroll', () => {
+    navMovement.style.backgroundColor = "rgba(255,255,255,0.5)"
 })
 
 
@@ -37,7 +37,7 @@ formStyling.style.fontSize = "16px"
 
 const formButtonChanges = document.getElementById("noRadio")
 
-formButtonChanges.addEventListener('onSelect', () => {
+formButtonChanges.addEventListener('change', () => {
     if(formButtonChanges.checked === true){
         window.alert("Quit lying!")
     }
@@ -80,8 +80,9 @@ doubleClicks.forEach(item => {
 
 const resizeDoc = document.querySelector('.container')
 
-resizeDoc.addEventListener("resize", () => {
-    if(resizeDoc.includes("max-width")){
+window.addEventListener("resize", () => {
+    if(resizeDoc.includes("")){
         copyText.style.fontSize = "18px"
     }
 })
+
