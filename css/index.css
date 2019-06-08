@@ -352,7 +352,7 @@ img {
   color: #17A2B8;
 }
 .animateText {
-  animation: fadein 2s;
+  animation: fadein 4s;
 }
 @keyframes fadein {
   from {
