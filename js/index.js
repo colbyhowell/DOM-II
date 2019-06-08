@@ -12,4 +12,30 @@ logoAnimate.addEventListener("mouseleave", () => {
     logoAnimate.style.transform = 'rotate(0deg)'
 })
 
-console.log(logoAnimate)
+// 2nd item
+
+const navMovement = document.querySelector('.main-navigation')
+
+navMovement.addEventListener('scroll', () => {
+    navMovement.style.background = "gray"
+})
+
+
+// 3rd item
+
+const copyText = document.querySelector('p')
+
+copyText.addEventListener('copy', () => {
+    window.confirm('Text Copied!')
+})
+
+// 4th item
+
+const formButtonChanges = document.querySelector('.adventureForm')
+
+formButtonChanges.style.fontSize = "16px"
+formButtonChanges.addEventListener('onSelect', () => {
+    if(document.querySelector("input[id=no):checked")){
+        window.alert("Quit lying!")
+    }
+})
