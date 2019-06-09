@@ -1,6 +1,6 @@
 // Your code goes here
 
-// 1st item
+// 1st item - Complete - mouseover mouseleave
 
 const logoAnimate = document.querySelector('.logo-heading')
 
@@ -12,7 +12,7 @@ logoAnimate.addEventListener("mouseleave", () => {
     logoAnimate.style.transform = 'rotate(0deg)'
 })
 
-// 2nd item
+// 2nd item - Complete - scroll
 
 const navMovement = document.querySelector('.main-navigation')
 
@@ -21,15 +21,16 @@ window.addEventListener('scroll', () => {
 })
 
 
-// 3rd item
+// 3rd item - Complete - copy
 
 const copyText = document.querySelector('p')
 
 copyText.addEventListener('copy', () => {
-    window.confirm('Text Copied!')
+    text = window.getSelection().toString()
+    window.alert("YOU COPIED: " + text)
 })
 
-// 4th item
+// 4th item - Complete - change
 
 const formStyling = document.querySelector('.adventureForm')
 formStyling.style.fontSize = "16px"
@@ -43,30 +44,31 @@ formButtonChanges.addEventListener('change', () => {
     }
 })
 
-// 5th Item
+// 5th Item - Complete - load
 
 const pageLoad = document.querySelectorAll('p')
 
 pageLoad.forEach(item => {
     item.classList.add('animateText')
-})
-
-pageLoad.forEach(item => {
     item.addEventListener('load', () => {
         item.classList.toggle("animateText")
     })
 })
 
-// 6th Item
-
-// const funSunButton = document.querySelectorAll(".btn")
-
-// funSunButton.addEventListener('focus' () => {
-//     funSunButton[0].textContent = "Pick Me!"
-// })
 
 
-// 7th item
+// 6th Item - Complete - mousedown
+
+const funSunButton = document.querySelectorAll(".btn")
+
+funSunButton.forEach(item => {
+    item.addEventListener('mousedown', () => {
+        item.textContent = `Good Choice!`
+    })
+})
+
+
+// 7th Item - Complete - dblclick
 
 const doubleClicks = document.querySelectorAll("img")
 
@@ -78,11 +80,43 @@ doubleClicks.forEach(item => {
 
 // 8th item
 
-const resizeDoc = document.querySelector('.container')
+const noImg = document.querySelector('img')
 
 window.addEventListener("resize", () => {
-    if(resizeDoc.includes("")){
-        copyText.style.fontSize = "18px"
-    }
+    if(window.innerWidth <= 450){
+       noImg.style.display = "none"
+    } else
+        {
+        noImg.style.display = "visible"
+        }
 })
 
+// 9th Item
+
+const dreamForm = document.querySelector('.dreamVacay')
+
+dreamForm.style.padding = "10px 10px 10px 10px"
+dreamForm.style.fontSize = "20px"
+dreamForm.style.margin = "auto"
+dreamForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+})
+
+dreamForm.addEventListener('keydown', () => {
+    newSearch = log.textContent().toString()
+    dreamForm.addEventListener('onsubmit', (event) => {
+        window.confirm(`Did you mean to search for ${newSearch}?`)
+    })
+
+})
+
+
+// Prevent Default Request
+
+let navDefaultStop = document.querySelectorAll('.nav-link')
+
+navDefaultStop.forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault()
+    })
+})
