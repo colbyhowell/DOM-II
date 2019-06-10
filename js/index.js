@@ -134,3 +134,17 @@ navDefaultStop.forEach(item => {
         event.preventDefault()
     })
 })
+
+// Stop Prop Series
+
+const backgroundNav = document.querySelector('.main-navigation')
+const linkColor = document.querySelector('.nav-link')
+
+backgroundNav.addEventListener('click', () => {
+    backgroundNav.style.backgroundColor = "gray"
+})
+
+linkColor.addEventListener('click', (event) => {
+    event.stopPropagation()
+    linkColor.style.color = "red"
+})
