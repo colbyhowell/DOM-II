@@ -362,3 +362,6 @@ img {
     opacity: 1;
   }
 }
+.draggingLinks {
+  opacity: 0.2;
+}

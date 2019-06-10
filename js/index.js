@@ -78,20 +78,20 @@ doubleClicks.forEach(item => {
     })
 })
 
-// 8th item
+// 8th item - Complete - Resize
 
 const noImg = document.querySelector('img')
 
 window.addEventListener("resize", () => {
     if(window.innerWidth <= 450){
        noImg.style.display = "none"
-    } else
+    } else if(window.innerWidth > 450)
         {
         noImg.style.display = "visible"
         }
 })
 
-// 9th Item
+// 9th Item - Complete - submit
 
 const dreamForm = document.querySelector('.dreamVacay')
 
@@ -102,14 +102,28 @@ dreamForm.addEventListener('submit', (event) => {
     event.preventDefault()
 })
 
-dreamForm.addEventListener('keydown', () => {
-    newSearch = log.textContent().toString()
-    dreamForm.addEventListener('onsubmit', (event) => {
+dreamForm.addEventListener('submit', () => {
+    newSearch = document.getElementById('locationSubmission').value
         window.confirm(`Did you mean to search for ${newSearch}?`)
-    })
-
 })
 
+
+// 10th Item - Complete - drag dragend
+
+const navDrag = document.querySelectorAll(".nav-link")
+const bodyWhite = document.querySelector("body")
+
+
+navDrag.forEach(item => {
+    bodyWhite.addEventListener('drag', () => {
+        bodyWhite.classList.add('draggingLinks')
+    })
+})
+navDrag.forEach(item => {
+    bodyWhite.addEventListener('dragend', () => {
+        bodyWhite.classList.remove('draggingLinks')
+    })
+})
 
 // Prevent Default Request
 
