@@ -180,6 +180,7 @@ img {
   background: #FFFFFF;
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
+  opacity: 1;
 }
 .main-navigation .nav-container {
   height: 100%;
@@ -349,4 +350,18 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.animateText {
+  animation: fadein 4s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.draggingLinks {
+  opacity: 0.2;
 }
